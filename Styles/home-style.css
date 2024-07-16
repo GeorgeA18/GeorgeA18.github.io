@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(/Fuentes/Montserrat-Italic-VariableFont_wght.ttf);
+    src: url(/Fuentes/Montserrat-VariableFont_wght.ttf);
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Montserrat';
+    
+}
+body{
+    font-size: 16px;
+    background-color: aqua;
+}
+
+
+.home-header{
+    height: 50px;
+    min-height: 50px;
+    width: 100%;
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #fafafa40;
+    /* border-radius: 0px 0px 20px 20px; */
+}
+
+.glass-effect{
+    background-color: #fafafa10;
+    backdrop-filter: blur(0.2rem);
+    -webkit-backdrop-filter: blur(0.2rem);
+}
+
+.home-nav{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin: 10px;
+}
+
+.container-nav-items{
+    display: grid;
+    grid-template-columns: 53px 25% 30% 25%;
+    justify-content: space-between;
+    width: 450px;
+    
+}
+
+.container-item{
+    list-style: none;
+    height: 50px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container-item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+}
+
+.container-nav-items li a{
+    list-style: none;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.menu-vertical{
+    position: absolute;
+    list-style: none;
+    display: block;
+    border: 2px solid #fafafa40;
+    width: 100px;
+    overflow: visible;
+    display: none;
+    
+}
+.menu-vertical li a{
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+}
+
+
+
+.container-item a:hover{
+    background-color: #ffcf8f70;
+    color: rgb(255, 89, 0);
+}
+
+.container-nav-items li:hover .menu-vertical{
+    display: block;
+}
+
+.label .menu{
+    fill: red !important;
+}
+
+
+.home-carrusel-background{
+    background: url(/mutlimedia/mountains.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 1500px;
+}
+
+#toggle,
+.home-nav label{
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+
+@media (max-width:720px){
+    
+    .home-nav label{
+        display: initial;
+        
+    }
+
+
+
+    .home-nav .container-nav-items{
+        position: absolute;
+        top: 100%;
+        justify-self: right;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+    
+    .container-nav-items{
+        max-width: 400px;
+    }
+
+    .container-itemñ{
+        padding-left: 0px;
+    }
+
+    #toggle:checked ~ .container-nav-items{
+        display: block;
+    }
+
+}
