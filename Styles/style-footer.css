@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(/Fuentes/Montserrat-Italic-VariableFont_wght.ttf);
+    src: url(/Fuentes/Montserrat-VariableFont_wght.ttf);
+
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.footer-information{
+    background-color: rgb(194, 119, 119);
+    height: auto;
+}
+
+.footer-information .contenedor-footer-items {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(141, 50, 50);
+}
+
+.footer-information .contenedor-footer-items .footer-item{
+    width: 300px;
+    padding: 30px;
+    background-color: rgb(1, 67, 45);
+}
+
+
+@media screen and (max-width:720px){
+    .footer-information{
+        visibility: hidden;
+    }
+}
